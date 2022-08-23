@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  php-apache-fpm:
+    container_name: php-fpm
+    build: 
+        context: v1
+        dockerfile: Dockerfile
+    volumes:
+      - ./v1:/var/www/html/
+    ports:
+      - 8000:80
